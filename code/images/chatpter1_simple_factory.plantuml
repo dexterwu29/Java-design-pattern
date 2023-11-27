@@ -1,0 +1,34 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class Add {
+  + getResult(double, double): double
+}
+class Div {
+  + getResult(double, double): double
+}
+class Mul {
+  + getResult(double, double): double
+}
+class Operation {
+  + getResult(double, double): double
+}
+class OperationFactory {
+  + createOperate(String): Operation
+}
+class Sub {
+  + getResult(double, double): double
+}
+
+Add               -[#000082,plain]-^  Operation        
+Div               -[#000082,plain]-^  Operation        
+Mul               -[#000082,plain]-^  Operation        
+OperationFactory  -[#595959,dashed]->  Add              : "«create»"
+OperationFactory  -[#595959,dashed]->  Div              : "«create»"
+OperationFactory  -[#595959,dashed]->  Mul              : "«create»"
+OperationFactory  -[#595959,dashed]->  Sub              : "«create»"
+Sub               -[#000082,plain]-^  Operation        
+@enduml
