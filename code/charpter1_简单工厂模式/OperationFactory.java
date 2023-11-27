@@ -4,9 +4,9 @@
  * 作用：输入运算符号，工厂实例化合适的对象
  */
 public class OperationFactory {
-    public static Operation createOperate(String operate){
+    public static Operation createOperate(String operate) {
         Operation oper = null;
-        switch (operate){
+        switch (operate) {
             case "+":
                 oper = new Add();
                 break;

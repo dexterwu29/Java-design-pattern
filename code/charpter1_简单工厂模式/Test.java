@@ -18,7 +18,8 @@ public class Test {
             double result = oper.getResult(numberA, numberB);
             System.out.println("结果是：" + result);
         } catch (Exception e) {
-            System.out.println("您的输入有误：" + e.toString());
+            System.out.print("您的输入有误：");
+            e.printStackTrace();
         }
     }
 }

@@ -3,9 +3,9 @@ import java.util.Scanner;
 /**
  * 相比于Test1，优化了：
  * ------------------
- *  1、变量命名
- *  2、switch case分支判断
- *  3、异常捕获（但除数为0，没有处理）
+ * 1、变量命名
+ * 2、switch case分支判断
+ * 3、异常捕获（但除数为0，没有处理）
  */
 public class Test2 {
     public static void main(String[] args) {
@@ -35,7 +35,8 @@ public class Test2 {
             }
             System.out.println("结果是：" + result); // 结果是：Infinity 除数为0还是没有单独的判断机制
         } catch (Exception e) {
-            System.out.println("您的输入有误：" + e.toString());
+            System.out.print("您的输入有误：");
+            e.printStackTrace();
         }
     }
 }
